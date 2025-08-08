@@ -1,0 +1,337 @@
+@font-face {
+  font-family: 'Gilroy-Semibold';
+  src: url(./../../assets/Fonts/gilroy-semibold.woff);
+}
+@font-face {
+  font-family: 'Mulish';
+  src: url(./../../assets/Fonts/Mulish.woff2);
+}
+
+.login-page {
+  /* Creating Variables to use in this components.. */
+
+  /* Fonts */
+  --primary-font: 'Gilroy-Semibold';
+  --secondary-font: 'Mulish';
+
+  /* Font sizes */
+
+  /* color */
+  --green-color: #084b3e;
+  --white-color: #ffffff;
+  --dark-text-color: #232323;
+  --cyan-color: #00c38b;
+  --heading-text-color: #f9e2ba;
+
+  /* gaps and padding */
+  --padding: 45px;
+  --gap: 10px;
+
+  background: url(./../../assets/images/Background.png) center/115% no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page__section {
+  width: 75%;
+  height: 100%;
+  background-color: white;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.login-page__section__left,
+.login-page__section__right {
+  height: 100%;
+  padding: calc(var(--padding)) calc(var(--padding));
+}
+
+/* Styling the left Part of section..... */
+.login-page__section__left {
+  width: 40%;
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.login-page__section__left__logo {
+  width: 50%;
+}
+
+.login-page__section__left__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-page__section__left__header {
+  font-size: 40px;
+  font-family: var(--primary-font);
+  line-height: 1.2;
+  color: var(--heading-text-color);
+  font-weight: 500;
+}
+
+/* Styling the Right Part of section..... */
+.login-page__section__right {
+  width: 60%;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.login-page__section__right__header {
+  width: 75%;
+  font-size: 35px;
+  font-family: var(--primary-font);
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--dark-text-color);
+}
+
+/* form styling starts from here... */
+.login-page__section__right__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.login-page__section__right__form__field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: calc(var(--gap));
+}
+
+.login-page__section__right__form label {
+  font-size: 18px;
+  font-family: var(--primary-font);
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--dark-text-color);
+}
+
+.login-page__section__right__form input {
+  width: 75%;
+  border: none;
+  border-bottom: 1px solid var(--dark-text-color);
+  padding: calc(var(--padding) / 8);
+  font-size: 16px;
+  font-family: var(--secondary-font);
+}
+.login-page__section__right__form input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--dark-text-color);
+}
+
+/* Styling the Sign up button here */
+.login-page__section__right__form .sign-up-btn {
+  width: 75%;
+  margin-top: calc(var(--padding) / 2);
+  background-color: var(--cyan-color);
+  border: none;
+  border-radius: 15px;
+  padding: calc(var(--padding) / 2) 0;
+  color: var(--white-color);
+  font-family: var(--primary-font);
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+.login-page__section__right__form .sign-up-btn:hover {
+  opacity: 0.8;
+}
+
+/* Styling right section bottom part... */
+.login-page__section__right__links {
+  width: 60%;
+  font-size: 18px;
+  font-family: var(--secondary-font);
+  color: var(--dark-text-color);
+}
+
+.login-page__section__right__links h5 {
+  opacity: 0.5;
+}
+
+.log-in-link {
+  color: var(--cyan-color);
+}
+.log-in-link:hover,
+.terms-and-service:hover {
+  opacity: 0.8;
+}
+
+/* Adding all the media queries....... */
+
+@media (max-width: 1270px) {
+  .login-page__section {
+    width: 80%;
+  }
+  .login-page__section__left__header {
+    font-size: 28px;
+  }
+
+  .login-page__section__right__header {
+    width: 80%;
+    font-size: 28px;
+  }
+  .login-page__section__right__form {
+    gap: calc(var(--gap) * 2);
+  }
+  .login-page__section__right__form label {
+    font-size: 16px;
+  }
+  .login-page__section__right__form .sign-up-btn {
+    padding: calc(var(--padding) / 3) 0;
+    font-size: 18px;
+  }
+  .login-page__section__right__links {
+    width: 70%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .login-page__section {
+    width: 85%;
+  }
+  .login-page__section__left,
+  .login-page__section__right {
+    width: 50%;
+  }
+  .login-page__section__right__header {
+    width: 85%;
+    font-size: 25px;
+  }
+
+  .login-page__section__right__form .sign-up-btn,
+  .login-page__section__right__form input {
+    width: 80%;
+  }
+  .login-page__section__right__links {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-page {
+    background: url(./../../assets/images/Background.png) center/cover no-repeat;
+  }
+  .login-page__section {
+    height: 80%;
+  }
+  .login-page__section__left__header {
+    font-size: 22px;
+  }
+
+  .login-page__section__left,
+  .login-page__section__right {
+    padding: calc(var(--padding) / 2) calc(var(--padding) / 1.5);
+  }
+  .login-page__section__right__header {
+    width: 100%;
+    font-size: 20px;
+  }
+  .login-page__section__right__form {
+    gap: calc(var(--gap));
+  }
+  .login-page__section__right__form .sign-up-btn,
+  .login-page__section__right__form input {
+    width: 100%;
+  }
+  .login-page__section__right__links {
+    font-size: 14px;
+  }
+}
+@media (max-width: 725px) {
+  .login-page__section {
+    width: 85%;
+    height: 90%;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  .login-page__section__left,
+  .login-page__section__right {
+    width: 100%;
+    padding: calc(var(--padding) / 2);
+  }
+  .login-page__section__left {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20%;
+  }
+  .login-page__section__right {
+    height: 80%;
+  }
+  .login-page__section__left__header {
+    font-size: 14px;
+    width: 50%;
+  }
+  .login-page__section__left__logo {
+    width: 20%;
+  }
+
+  .login-page__section__right__header {
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .login-page__section__right__form .sign-up-btn {
+    padding: calc(var(--padding) / 4) 0;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 525px) {
+  .login-page__section {
+    width: 95%;
+    height: 90%;
+    flex-direction: column;
+    border-radius: 15px;
+  }
+  .login-page__section__left__logo {
+    width: 30%;
+  }
+  .login-page__section__left__header {
+    /* width: 60%; */
+    font-size: 12px;
+  }
+  .login-page__section__right__header {
+    font-size: 26px;
+  }
+
+  .login-page__section__right__form__field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: calc(var(--gap)/4);
+  }
+  .login-page__section__right__form label {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .login-page__section__right__form input {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
